@@ -6,6 +6,7 @@ for(i=0;i<familiares.length;i++){
 }
 console.log(novosFamiliares.toString()); */
 
+/*
 function dec2bin(decNumber){
     let restStack = [],
     rest,
@@ -26,3 +27,45 @@ function dec2bin(decNumber){
 
 console.log(dec2bin(10));
 
+*/
+function queue(){
+    var items = [];
+
+    this.equeue  = function(item){
+        // add item
+        items.push(item);
+    }
+
+    this.dqueue = function(){
+        items.shift();
+        // remove item
+    }
+    this.front = function(){
+        return items[0];
+    }
+    this.isEmpty = function(){
+        return items.length == 0;
+    }
+    this.size = function(){
+        return items.length;
+        // retorna o tamanho da fila
+    }
+    this.print = function(){
+        console.log(items.toString());
+        //imprime a fila
+    }
+}
+
+var queue = new queue();
+
+queue.equeue('OI');
+queue.equeue('tchau');
+queue.equeue('sei não');
+queue.dqueue();
+queue.equeue('Grelo');
+queue.dqueue();
+console.log(queue.isEmpty());
+console.log(queue.size());
+console.log(queue.front());
+
+queue.print();
