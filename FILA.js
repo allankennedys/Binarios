@@ -69,3 +69,4 @@ console.log(queue.size());
 console.log(queue.front());
 
 queue.print();
+console.log(document.write("OIi"));
